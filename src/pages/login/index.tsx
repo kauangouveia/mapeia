@@ -3,7 +3,6 @@ import { Container } from "../../components/Container"
 import { Divider } from "../../components/Divider"
 import { MyInput as Input } from "../../components/Input"
 import { useForm, FormProvider } from "react-hook-form";
-import { P } from "../../components/Paragraph";
 import mapeiaLogo from "../../assets/mapeiaLogo.png"
 import { useNavigate } from "react-router-dom";
 
