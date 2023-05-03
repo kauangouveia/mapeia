@@ -15,6 +15,7 @@ export const Login = () => {
    const methods = useForm<LoginProps>();
    const navigate = useNavigate()
    const onSubmit = (data: LoginProps) => {
+      navigate('/site-mapeia')
       console.log(data)
    }
 
@@ -24,8 +25,8 @@ export const Login = () => {
             <form className="w-[700px] h-auto flex flex-col justify-center items-center gap-2"
                onSubmit={methods.handleSubmit(onSubmit)}>
                <img src={mapeiaLogo} alt="Logo" className="p-5" />
-               <Input textLabel="Email" textPlaceholder="user@gmail.com" registerText="email" type="email" />
-               <Input textLabel="Password" textPlaceholder="***********" registerText="password" type="password" />
+               <Input size={400} textLabel="Email" textPlaceholder="user@gmail.com" registerText="email" type="email" />
+               <Input size={400} textLabel="Password" textPlaceholder="***********" registerText="password" type="password" />
                <Divider />
                <p className="text-lg text-gray-900 font-bold mb-2 cursor-pointer" onClick={() => navigate('/register')}>Register</p>
                <Button text="LOGIN" type="submit" />
