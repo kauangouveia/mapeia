@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+@layer components {
+    .input-primary {
+      @apply p-3 rounded outline-none border-2 border-violet-700;
+    }
+  }
