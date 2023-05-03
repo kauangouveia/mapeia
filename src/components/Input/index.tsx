@@ -5,14 +5,15 @@ type InputProps = {
     textPlaceholder: string
     type: React.HTMLInputTypeAttribute
     registerText: string
+    size: number
 }
 
-const Input = ({ textLabel, textPlaceholder, type, registerText }: InputProps) => {
+const Input = ({ textLabel, textPlaceholder, type, registerText, size }: InputProps) => {
     const { register } = useFormContext();
     return (
         <label>
             <p className="p-2 font-medium">{textLabel}</p>
-            <input placeholder={textPlaceholder} type={type} className="w-[400px] p-3 rounded outline-none border-2 border-violet-700" {...register(registerText)} />
+            <input placeholder={textPlaceholder} type={type} className={`w-[${size}px] p-3 rounded outline-none border-2 border-violet-700`} {...register(registerText)} />
         </label>
     )
 }
