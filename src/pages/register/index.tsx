@@ -33,12 +33,12 @@ export const Register = () => {
           onSubmit={methods.handleSubmit(onSubmit)}>
           <img src={mapeiaLogo} alt="Logo" className="p-5" />
           <div className="flex gap-4">
-            <Input size="200" textLabel="Name" textPlaceholder="User" registerText="name" type="text" />
-            <Input size="200" textLabel="Email" textPlaceholder="user@gmail.com" registerText="email" type="email" />
+            <Input size="[200px]" textLabel="Name" textPlaceholder="User" registerText="name" type="text" />
+            <Input size="[200px]" textLabel="Email" textPlaceholder="user@gmail.com" registerText="email" type="email" />
           </div>
           <div className="flex gap-4">
-            <Input size="200" textLabel="Password" textPlaceholder="***********" registerText="password" type="password" />
-            <Input size="200" textLabel="Document" textPlaceholder="xxx-xxx-xxx-xx" registerText="document" type="text" />
+            <Input size="[200px]" textLabel="Password" textPlaceholder="***********" registerText="password" type="password" />
+            <Input size="[200px]" textLabel="Document" textPlaceholder="xxx-xxx-xxx-xx" registerText="document" type="text" />
           </div>
           <div className="flex gap-4 mb-3">
             <Checkbox id="CAR" labelText="CAR" value="true" registerText="CAR" />

@@ -10,10 +10,11 @@ type InputProps = {
 
 const Input = ({ textLabel, textPlaceholder, type, registerText, size }: InputProps) => {
     const { register } = useFormContext();
+    
     return (
         <label>
             <p className="p-2 font-medium">{textLabel}</p>
-            <input placeholder={textPlaceholder} type={type} className={`w-[${size}px] input-primary`} {...register(registerText)} />
+            <input placeholder={textPlaceholder} type={type} className={`${"w-" + size} input-primary`} {...register(registerText)} />
         </label>
     )
 }
