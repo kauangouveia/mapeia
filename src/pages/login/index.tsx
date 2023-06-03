@@ -14,16 +14,13 @@ type LoginProps = {
 export const Login = () => {
    const methods = useForm<LoginProps>();
    const navigate = useNavigate()
-   const onSubmit = (data: LoginProps) => {
-      navigate('/site-mapeia')
-      console.log(data)
-   }
+
 
    return (
       <Container>
          <FormProvider {...methods}>
             <form className="w-[700px] h-auto flex flex-col justify-center items-center gap-2"
-               onSubmit={methods.handleSubmit(onSubmit)}>
+               onSubmit={() => navigate('/site-mapeia')}>
                <img src={mapeiaLogo} alt="Logo" className="p-5" />
                <Input size="[400px]" textLabel="Email" textPlaceholder="user@gmail.com" registerText="email" type="email" />
                <Input size="[400px]" textLabel="Password" textPlaceholder="***********" registerText="password" type="password" />
