@@ -21,16 +21,11 @@ export const Register = () => {
   const navigate = useNavigate()
 
 
-  const onSubmit = (data: RegisterProps) => {
-    navigate('/')
-    console.log(data)
-  }
-
   return (
     <Container>
       <FormProvider {...methods}>
         <form className="w-[700px] h-auto flex flex-col justify-center items-center gap-2"
-          onSubmit={methods.handleSubmit(onSubmit)}>
+          onSubmit={() => navigate('/')}>
           <img src={mapeiaLogo} alt="Logo" className="p-5" />
           <div className="flex gap-4">
             <Input size="[200px]" textLabel="Name" textPlaceholder="User" registerText="name" type="text" />
