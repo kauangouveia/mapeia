@@ -14,7 +14,7 @@ const Input = ({ textLabel, textPlaceholder, type, registerText, size }: InputPr
     return (
         <label>
             <p className="p-2 font-medium">{textLabel}</p>
-            <input placeholder={textPlaceholder} type={type} className={`${"w-" + size} input-primary`} {...register(registerText)} />
+            <input placeholder={textPlaceholder} type={type} className={`${"w-" + size} input-primary`} {...register(registerText)} required/>
         </label>
     )
 }
