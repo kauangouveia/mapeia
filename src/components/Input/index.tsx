@@ -9,12 +9,12 @@ type InputProps = {
 }
 
 const Input = ({ textLabel, textPlaceholder, type, registerText, size }: InputProps) => {
-    const { register } = useFormContext();
-    
+    const data = useFormContext();
+
     return (
         <label>
             <p className="p-2 font-medium">{textLabel}</p>
-            <input placeholder={textPlaceholder} type={type} className={`${"w-" + size} input-primary`} {...register(registerText)} required/>
+            <input placeholder={textPlaceholder} type={type} data-testid='input-id' className={`${"w-" + size} input-primary`} {...data?.register(registerText)} required />
         </label>
     )
 }
