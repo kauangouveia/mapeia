@@ -12,7 +12,7 @@ export const Checkbox = ({ id, value, labelText, registerText }: checkBoxProps) 
 
     return (
         <div className="w-52 h-10 pl-5 rounded flex justify-start items-center gap-3 font-semibold border-2 border-violet-700 mt-5">
-            <input type='checkbox' id={id} value={value}  {...data?.register(registerText)} />
+            <input type='checkbox' id={id} value={value}  {...data?.register(registerText)}  data-testid='checkbox-id'/>
             <label> {labelText} </ label>
         </ div>
     )
